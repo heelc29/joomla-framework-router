@@ -32,7 +32,7 @@ class MethodNotAllowedException extends \RuntimeException
      * @param   integer      $code            The Exception code.
      * @param   ?\Exception  $previous        The previous throwable used for the exception chaining.
      */
-    public function __construct(array $allowedMethods, $message = null, $code = 405, \Exception $previous = null)
+    public function __construct(array $allowedMethods, $message = null, $code = 405, ?\Exception $previous = null)
     {
         $this->allowedMethods = array_map('strtoupper', $allowedMethods);
 
